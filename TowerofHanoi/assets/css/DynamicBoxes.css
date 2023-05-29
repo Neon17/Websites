@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+}
+
+#containerofcontainer {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.totalcontainer {
+    border: 1px solid black;
+    width: 400px;
+}
+
+.container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+/* This below has the height of total boxes and width of maximum box width */
+.justmakinghalf {
+    position: absolute;
+    height: 300px;
+    z-index: 5;
+    width: 197.5px;
+    border-right: 5px solid yellowgreen;
+}
