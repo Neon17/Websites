@@ -15,12 +15,12 @@ class box {
 
 window.onload = function () {
     setup(5, 400, 250);
-    setupmakebox();
-    drawbox();
     // I don't know how to pause the program execution
-    movebox(4,2);
-    clearallboxinhtm();
-    drawbox();
+    solutionfor2(1,2,3);
+}
+
+var hello = function () {
+    alert("Hello");
 }
 
 // The below function is like draw box rather than setup
@@ -36,6 +36,7 @@ var setup = function (nbox, cwidth, cheight) { //cwidth=container width & cheigh
     container[2].setAttribute("style", `width: ${containerwidth.toString()}px; height: ${containerheight.toString()}px;`);
 
     setupmakebox();
+    drawbox();
 }
 
 var setupmakebox = function () {
@@ -54,15 +55,46 @@ var setupmakebox = function () {
         let width = minwidth + i * d;
         boxes[i] = new box(width, boxheight, 1, (i+1));
     }
+    setupmakeboxhtm();
+}
+
+var checkformove = function (boxnumber, requiredtowernumber) {
+    //This function checks if we mistakenly move middle or last boxes except first box
+   var previouspositionnumber = boxes[boxnumber-1].position;
+   if (previouspositionnumber!=1){
+        return 0;
+   }
+   var i = 0;
+   for (; i<boxnumber; i++){
+        if (boxes[i].towernumber == requiredtowernumber){
+            return 0;
+        }
+   }
+   return 1;
 }
 
 var movebox = function(boxnumber, requiredtowernumber){
     //Call this only if after htmlboxes has value
+    // if (checkformove(boxnumber,requiredtowernumber)==0){ 
+    //     alert("Just move small box at the top in the tower above the bigger box!");     
+    //     return;
+    // }
+    var previoustowernumber = boxes[boxnumber-1].towernumber;
     boxes[boxnumber - 1].towernumber = requiredtowernumber;
-    boxes[boxnumber - 1].position = positionintower(requiredtowernumber);
+    boxes[boxnumber - 1].position = 1; //moved boxes are always in top so 1
+    let i = 0;
+    for (; i<n; i++){
+        if (boxes[i].towernumber == previoustowernumber){
+            boxes[i].position = boxes[i].position - 1;
+        }
+        if (boxes[i].towernumber == requiredtowernumber){
+            boxes[i].position = boxes[i].position + 1;
+        }
+    }
 }
 
-var makeboxhtm = function() {
+var setupmakeboxhtm = function() {
+    // It creates html container
     for (i = (n-1); i >= 0; i--) {
         if ((boxes[i].towernumber > 0) && (boxes[i].towernumber < 4)) {
             htmlboxes[i] = document.createElement("div");
@@ -72,11 +104,16 @@ var makeboxhtm = function() {
     }
 }
 
+var makeboxhtm = function () {
+    clearallboxinhtm();
+    setupmakeboxhtm();
+}
+
 var positionintower = function (towernumber){
     // It checks available position for incoming box in tower
     // It is necessary just to check if rules are followed or not
     var i =0;
-    var position = 1;
+    var position = 0;
     for (;i<n;i++){
         if (towernumber==boxes[i].towernumber){
             position = position+1;
@@ -106,3 +143,50 @@ var drawbox = function () {
     // After executing this, we should reset it or move to another container before recalling
 
 } //In setAttribute, only last one is done if written multiple setAttribute in same node
+
+
+
+var solutionfor2 = function(a,b, requiredtower_number) {
+    //box_number is one dimensional array with 2 elements
+    //requiredtower_number is destination tower and differenttower_number is tower different from origin and destination
+    //boxes are in same tower and overlapping in increasing size
+
+    origintower_number = boxes[a-1]%10;
+    var cal;
+    //I also supposed origintower_number and requiredtower_number to be valid
+    cal = origintower_number + requiredtower_number;
+    differenttower_number = (cal==3)?3:(cal==4)?2:1;
+
+    movebox(a,differenttower_number);
+    drawbox();
+
+    movebox(b,requiredtower_number);
+    drawbox();
+
+    movebox(a,requiredtower_number);
+    drawbox();
+}
+
+// function solution(box_number, num, requiredtower_number){ //Recursive Function of type void
+//     //box_number stores n values : 0,1,2, .... n
+//     var cal, topFromBottom, differenttower_number, i;
+
+//     var origintower_number = boxes[box_number[0]-1]%10;
+//     cal = origintower_number + requiredtower_number;
+//     differenttower_number = (cal==3)?3:(cal==4)?2:1;
+
+//     if (n==2){
+//         solutionfor2(a, b, requiredtower_number);
+//     }
+//     else {
+//         var mbox = new Array(n-1);
+//         for (i=0; i<(n-1); i++){
+//             mbox[i] = box_number[i];
+//         }
+//         topFromBottom = positionintower(requiredtower_number);
+//         solution(mbox,(n-1),differenttower_number);
+//         movebox(box_number[(n-1)],requiredtower_number);
+//         drawbox();
+//         solution(mbox,(n-1),requiredtower_number);
+//     }
+// }
