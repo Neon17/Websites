@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Things</title>
+    <style>
+        #dropdown {
+            width: 20%;
+        }
+        .dropdownitem {
+            width: 100%;
+            height: 10vh;
+            border: 1px dashed rgb(97, 88, 88);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .dropdownitem:hover {
+            cursor: pointer;
+            background-color: rgb(168, 214, 199);
+        }
+        #hideshowdropdown{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple things like making drop down list and animation -->
+    <div id="dropdown">
+        <section class="dropdownitem" id="dropdown1" onclick="show()">More</section>
+        <div id="hideshowdropdown">
+            <section class="dropdownitem" id="dropdown2">About</section>
+            <section class="dropdownitem" id="dropdown3">Contact Us</section>
+            <section class="dropdownitem" id="dropdown4">Our Address</section>
+            <section class="dropdownitem" id="dropdown5">Jobs and Offers</section>
+        </div>
+    </div>
+    <script>
+        var hideshow = document.getElementById("hideshowdropdown");
+        var clickstatus = 0;
+        function show() {
+            if (clickstatus == 1){
+                hide();
+                return;
+            }
+            hideshow.style.display = "block";
+            clickstatus =  1;
+        }
+        function hide () {
+            hideshow.style.display = "none";
+            clickstatus = 0;
+        }
+    </script>
+</body>
+</html>

@@ -31,9 +31,17 @@
             </div>
             <div class="headertitles" id="headertitlesholder4">
                 <div class="headertitlestext">
-                    More
-                    <br>
-                    <i class="arrow down"></i>
+                    <section class="dropdownitem" id="dropdown1" onclick="show()">
+                        More
+                        <br>
+                        <i class="arrow down"></i>
+                    </section>
+                    <div id="hideshowdropdown">
+                        <section class="dropdownitem" id="dropdown2">About</section>
+                        <section class="dropdownitem" id="dropdown3">Contact Us</section>
+                        <section class="dropdownitem" id="dropdown4">Our Address</section>
+                        <section class="dropdownitem" id="dropdown5">Jobs and Offers</section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,8 +110,7 @@
         <section id="boxesdescriptionoffer">
             <div id="boxesdescriptionholder1" class="boxesdescriptionholder">
                 <div class="boxoffer">
-                    <iframe src="https://www.youtube.com/embed/kic8IlmhHQo"
-                        title="YouTube video player" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/kic8IlmhHQo" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
@@ -111,8 +118,7 @@
             </div>
             <div id="boxesdescriptionholder2" class="boxesdescriptionholder">
                 <div class="boxoffer">
-                    <iframe src="https://www.youtube.com/embed/EkksxbSe30A"
-                        title="YouTube video player" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/EkksxbSe30A" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
@@ -120,8 +126,7 @@
             </div>
             <div id="boxesdescriptionholder3" class="boxesdescriptionholder">
                 <div class="boxoffer">
-                    <iframe src="https://www.youtube.com/embed/v7tYD1FibE4"
-                        title="YouTube video player" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/v7tYD1FibE4" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
@@ -129,8 +134,7 @@
             </div>
             <div id="boxesdescriptionholder4" class="boxesdescriptionholder">
                 <div class="boxoffer">
-                    <iframe src="https://www.youtube.com/embed/54jY6luCT6k"
-                        title="YouTube video player" frameborder="0"
+                    <iframe src="https://www.youtube.com/embed/54jY6luCT6k" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
@@ -139,7 +143,7 @@
         </section>
         <section id="offerextradescription">
             <div id="messageleave">
-               <textarea rows="30%" cols="50%">Enter your messages and suggestions here..</textarea>
+                <textarea rows="30%" cols="50%">Enter your messages and suggestions here..</textarea>
             </div>
             <div id="noteoffer">
                 <input type="submit" value="Submit">
@@ -151,7 +155,7 @@
             <br>Antartica<br>Earth<br>Milky Way Galaxy
         </div>
         <div id="faqfooter" class="footeritemholder"><br><strong>Jobs</strong> <br>
-            <br>  <a href="#">Freelancing</a><br><a href="#">Web Development</a>
+            <br> <a href="#">Freelancing</a><br><a href="#">Web Development</a>
         </div>
         <div id="jobsfooter" class="footeritemholder"><br><strong>Contact Us</strong> <br>
             <br> 9812345678
@@ -165,6 +169,20 @@
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
+        var hideshow = document.getElementById("hideshowdropdown");
+        var clickstatus = 0;
+        function show() {
+            if (clickstatus == 1) {
+                hide();
+                return;
+            }
+            hideshow.style.display = "block";
+            clickstatus = 1;
+        }
+        function hide() {
+            hideshow.style.display = "none";
+            clickstatus = 0;
+        }
         var typed = new Typed(".textherointro", {
             strings: ["Employement Opportunities", "Teaching Courses", "Software Development"],
             typeSpeed: 100,

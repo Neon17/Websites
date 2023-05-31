@@ -1,366 +1,388 @@
 body {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
 }
 #header {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin: 0;
-    width: 100%;
-    height: 20vh;
-    background-color: rgb(233, 217, 197);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  height: 20vh;
+  background-color: rgb(233, 217, 197);
 }
 #hero {
-    margin: 0;
-    width: 100%;
-    overflow: hidden;
-    height: 80vh;
-    background-color: yellowgreen;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 80vh;
+  background-color: yellowgreen;
 }
 #destination {
-    margin: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background-color: beige;
-    display: flex;
-    align-items: center;
-
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: beige;
+  display: flex;
+  align-items: center;
 }
 #offer {
-    margin: 0;
-    width: 100%;
-    overflow: hidden;
-    height: 100vh;
-    background-color: rgb(199, 180, 180);
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  background-color: rgb(199, 180, 180);
 }
 #footer {
-    margin: 0;
-    width: 100%;
-    overflow: hidden;
-    background-color: black;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
 }
 #logocompany {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    background: url("../img/mlogo.JPG");
-    z-index: 5;
-    background-color: aquamarine
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background: url("../img/mlogo.JPG");
+  z-index: 5;
+  background-color: aquamarine;
 }
 #headerlogoholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
 }
 #headertitlesholder {
-    display: flex;
-    width: 70%;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
 }
 .headertitles {
-    margin-left: 2%;
-    width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-left: 2%;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .headertitlestext {
-    width: 70%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(240, 255, 255, 0.6);
-    opacity: 0.6;
-    border-radius: 5%;
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 255, 255, 0.6);
+  opacity: 0.6;
+  border-radius: 5%;
 }
 .headertitlestext:hover {
-    cursor: pointer;
-    background-color: rgb(127,255,212);
-    opacity: 1;
+  cursor: pointer;
+  background-color: rgb(127, 255, 212);
+  opacity: 1;
 }
 .arrow {
-    border: solid black;
-    border-width: 0 1px 1px 0;
-    display: inline-block;
-    padding: 2%;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2%;
 }
 .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
-
-
+#dropdown {
+  width: 20%;
+}
+.dropdownitem {
+  width: 100%;
+  height: 10vh;
+  border: 1px solid rgb(97, 88, 88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.dropdownitem:hover {
+  cursor: pointer;
+  background-color: rgb(127, 255, 212);
+}
+#hideshowdropdown {
+  display: none;
+  position: absolute;
+  background-color: (240, 255, 255, 0.6);
+  z-index: 5;
+  width: 11.3%;
+  top: 15%;
+}
 
 #hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #hero #introfirstholderhero {
-    height: 15%;
-    margin-bottom: 5%;
-    font-size: 250%;
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-    text-align: center;
+  height: 15%;
+  margin-bottom: 5%;
+  font-size: 250%;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 #hero #introsecondholderhero {
-    height: 8%;
-    font-size: 150%;
-    text-align: center;
-    margin-bottom: 2%;
+  height: 8%;
+  font-size: 150%;
+  text-align: center;
+  margin-bottom: 2%;
 }
 #hero #searchboxholderhero {
-    height: 8%;
-    width: 50%;
+  height: 8%;
+  width: 50%;
 }
 #searchboxholderhero {
-    display: flex;
+  display: flex;
 }
 .searchtextbox {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .searchtextbox input[type="text"] {
-    width: 90%;
-    margin-left: 10%;
-    height: 90%;
-    border: none;
-    text-align: center;
-    font-family: inherit;
-    font-size: 100%;
+  width: 90%;
+  margin-left: 10%;
+  height: 90%;
+  border: none;
+  text-align: center;
+  font-family: inherit;
+  font-size: 100%;
 }
 .searchbutton {
-    width: 20%;
-    margin-right: 10%;
-    border-radius: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(25,245,220);
-    opacity: 0.6;
+  width: 20%;
+  margin-right: 10%;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(25, 245, 220);
+  opacity: 0.6;
 }
 .searchbutton:hover {
-    opacity: 1;
-    cursor: pointer;
+  opacity: 1;
+  cursor: pointer;
 }
 #hero .herointro {
-    border-radius: 5%;
+  border-radius: 5%;
 }
 
 .downupformatholder {
-    height: 15%;
-    background-color: rgb(170, 129, 74);
+  height: 15%;
+  background-color: rgb(170, 129, 74);
 }
 .destinationtitle {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 #destinationtitletop {
-    font-size: 250%;
+  font-size: 250%;
 }
 #destinationtitlemiddle {
-    margin-top: 5%;
-    font-size: 100%;
+  margin-top: 5%;
+  font-size: 100%;
 }
 
 #boxesdestinationholder {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 #boxesdestination {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
-    height: 100%;
-    width: 96%;
-    margin-left: 2%;
-    justify-content: space-between;
-    background-color: beige;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  width: 96%;
+  margin-left: 2%;
+  justify-content: space-between;
+  background-color: beige;
 }
 .boxdestination {
-    display: flex;
-    width: 30%;
-    height: 22%;
-    background-color: gainsboro;
+  display: flex;
+  width: 30%;
+  height: 22%;
+  background-color: gainsboro;
 }
 .boxdestination:hover {
-    cursor: pointer;
-    background-color: rgb(211, 177, 177);
+  cursor: pointer;
+  background-color: rgb(211, 177, 177);
 }
 .textboxdestination {
-    align-self: center;
-    width: 100%;
-    text-align: center;
+  align-self: center;
+  width: 100%;
+  text-align: center;
 }
 .ratingboxdestination {
-    align-self: flex-end;
-    justify-self: right;
-    background-color: antiquewhite;
+  align-self: flex-end;
+  justify-self: right;
+  background-color: antiquewhite;
 }
 
 #box4 {
-    width: 65%;
+  width: 65%;
 }
 #box7 {
-    width: 65%;
+  width: 65%;
 }
 
 #offerintroformatholder {
-    text-align: center;
-    height: 20%;
-    width: 100%;
+  text-align: center;
+  height: 20%;
+  width: 100%;
 }
 #introtitletop {
-    font-size: 300%;
+  font-size: 300%;
 }
 #maindescriptionholder {
-    height: 80%;
-    width: 100%;
+  height: 80%;
+  width: 100%;
 }
 .boxoffer {
-    margin-right: 5%;
+  margin-right: 5%;
 }
 #boxesdescriptionoffer {
-    width: 55%;
-    height: 78%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex: 1;
-    float: left;
+  width: 55%;
+  height: 78%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+  float: left;
 }
-.boxesdescriptionholder{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.boxesdescriptionholder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .boxdescription {
-    background-color: rgb(0,255,255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 80%;
+  background-color: rgb(0, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 80%;
 }
 .boxdescription:hover {
-    background-color: rgb(196, 233, 233) ;
-    cursor: pointer;
+  background-color: rgb(196, 233, 233);
+  cursor: pointer;
 }
 .boxoffer iframe {
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
 }
 .boxoffer iframe:hover {
-    opacity: 1;
+  opacity: 1;
 }
 #offerextradescription {
-    height: 78%;
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    flex-direction: column;
+  height: 78%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
 }
 #messageleave {
-    width: 100%;
-    height: 80%;
-    margin-top: 3%;
-    margin-bottom: 2%;
+  width: 100%;
+  height: 80%;
+  margin-top: 3%;
+  margin-bottom: 2%;
 }
 #messageleave textarea {
-    height: 100%;
-    width: 80%;
+  height: 100%;
+  width: 80%;
 }
 #noteoffer input {
-    margin-left: 35%;
-    background-color: aqua;
-    border:none;
-    padding: 5px 5px 5px 5px;
+  margin-left: 35%;
+  background-color: aqua;
+  border: none;
+  padding: 5px 5px 5px 5px;
 }
 
 #footer {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 .footeritemholder {
-    height: 100%; 
-    text-align: center;
-    flex: 1;
-    color: white;
+  height: 100%;
+  text-align: center;
+  flex: 1;
+  color: white;
 }
 .footeritemholder strong {
-    color: skyblue;
-    font: 200%;
+  color: skyblue;
+  font: 200%;
 }
-.footeritemholder>a {
-    text-decoration: none;
-    color: white;
+.footeritemholder > a {
+  text-decoration: none;
+  color: white;
 }
-.footeritemholder>a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+.footeritemholder > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 950px) {
-    #offerextradescription {
-        display: none;
-    }
-    #boxesdescriptionoffer {
-        width: 90%;
-    }
-    .boxesdescriptionholder {
-        padding-left: 15%;
-    }
-    #headertitlesholder2,#headertitlesholder3{
-        display: none;
-    }
-    #ratingfooter {
-        display: none;
-    }
+  #offerextradescription {
+    display: none;
+  }
+  #boxesdescriptionoffer {
+    width: 90%;
+  }
+  .boxesdescriptionholder {
+    padding-left: 15%;
+  }
+  #headertitlesholder2,
+  #headertitlesholder3 {
+    display: none;
+  }
+  #ratingfooter {
+    display: none;
+  }
 }
-@media screen and (max-width: 900px){
-    #destination {
-        flex-direction: column;
-    }
-    #destinationintroholder {
-        margin-top: 5%;
-    }
+@media screen and (max-width: 900px) {
+  #destination {
+    flex-direction: column;
+  }
+  #destinationintroholder {
+    margin-top: 5%;
+  }
 }
-@media screen and (max-width: 450px){
-    .boxdescription {
-        display: none;
-    }
-    #faqfooter {
-        display: none;
-    }
+@media screen and (max-width: 450px) {
+  .boxdescription {
+    display: none;
+  }
+  #faqfooter {
+    display: none;
+  }
 }
 @media screen and (max-height: 750px) {
-    #boxesdescriptionholder4 {
-        display: none;
-    }
+  #boxesdescriptionholder4 {
+    display: none;
+  }
 }
 @media screen and (max-height: 560px) {
-    #boxesdescriptionholder3 {
-        display: none;
-    }
+  #boxesdescriptionholder3 {
+    display: none;
+  }
 }
