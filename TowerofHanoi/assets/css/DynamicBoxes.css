@@ -12,7 +12,7 @@ body {
 .totalcontainer {
     border: 1px solid black;
     width: 400px;
-    height: 300px;
+    height: 300px; /*height is 250px in js so I made 300px so that there is gap and looks nice*/
     /* This both height and width are calculated from js manually */
     padding: 0 0 0 0;
 }
