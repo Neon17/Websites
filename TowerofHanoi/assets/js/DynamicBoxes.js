@@ -79,15 +79,18 @@ var checkformove = function (boxnumber, requiredtowernumber) {
 
 var movebox = function (boxnumber, requiredtowernumber) {
     //Call this only if after htmlboxes has value
-    // if (checkformove(boxnumber,requiredtowernumber)==0){
-    //     alert("Just move small box at the top in the tower above the bigger box!");
-    //     return;
-    // }
+    if (checkformove(boxnumber,requiredtowernumber)==0){
+        alert("Just move small box at the top in the tower above the bigger box!");
+        return;
+    }
     var previoustowernumber = boxes[boxnumber - 1].towernumber;
     boxes[boxnumber - 1].towernumber = requiredtowernumber;
     boxes[boxnumber - 1].position = 1; //moved boxes are always in top so 1
     let i = 0;
     for (; i < n; i++) {
+        if (i==(boxnumber - 1)){
+            continue;
+        }
         if (boxes[i].towernumber == previoustowernumber) {
             boxes[i].position = boxes[i].position - 1;
         }
