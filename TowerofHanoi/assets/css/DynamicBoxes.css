@@ -2,19 +2,24 @@ body {
     background-color: white;
 }
 
-#containerofcontainer {
+.containerofcontainer {
     display: flex;
     justify-content: space-around;
-
+    margin-bottom: 5%;
+    padding: 0 0 0 0;
 }
 
 .totalcontainer {
     border: 1px solid black;
     width: 400px;
+    height: 300px;
+    /* This both height and width are calculated from js manually */
+    padding: 0 0 0 0;
 }
 
 .container {
-    padding-top: 50px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
