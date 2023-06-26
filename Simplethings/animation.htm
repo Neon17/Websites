@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #container {
+            height: 100px;
+            background-color: aquamarine;
+        }
+        #container:hover {
+            height: 500px;
+            transition: height 3s ease-out;
+            cursor: pointer;
+        }
+        #container1 {
+            background-color: yellow;
+            height: 500px;
+            animation-name: anihel;
+        }
+        #container1:hover {
+            cursor: pointer;
+            animation-name: anihel;
+            animation-timing-function: ease-in;
+            animation-duration: 3s;
+        }
+        @keyframes anihel {
+           0% {background-color: red;}
+           25% {background-color: aliceblue;}
+           50% {background-color: antiquewhite;}
+           75% {background-color: aquamarine;}
+           100% {background-color: green;}
+        }
+        #movebox {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: yellowgreen;
+        }
+        #movebox:hover {
+            animation: 1s linear moveit;
+            cursor: pointer;
+        }
+        @keyframes moveit {
+            0% {top: 20px; left: 50px;}
+            20% {top: 40px; left: 60px;}
+            40% {top: 60px; left: 70px;}
+            60% {top: 80px; left: 80px;}
+            80% {top: 100px; left: 90px;}
+            100% {top: 120px; left: 100px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <div id="container1">
+
+    </div>
+    <div id="movebox" onmouseover="move()">
+
+    </div>
+
+    <div id="printhello"></div>
+    <script>
+        var node;
+        var printCount = 1;
+        myInterval = setInterval(printHello, 1000);
+        function move() {
+            setTimeout(moveit,1000);
+        }
+        function moveit() {
+            console.log("moveit() is reached");
+            node = document.getElementById("movebox");
+            node.style.top = "100px";
+            node.style.left = "100px";
+        }
+        function printHello() {
+            if (printCount==5){
+                clearInterval(myInterval);
+            }
+            var n = document.getElementById("printhello");
+            n.innerHTML += "Hello";
+            printCount++;
+        }
+    </script>
+</body>
+</html>
