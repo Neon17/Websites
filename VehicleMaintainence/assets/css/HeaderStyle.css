@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 header {
     height: 80px;
@@ -67,25 +68,29 @@ nav {
     width: 100%;
     height: 100%;
 }
-progress {
+/* progress {
     width: 100%;
     height: 10px;
     display: none;
-}
+} */
 .naviconholder:hover {
     cursor: pointer;
-    background-color: aliceblue;
-    color: #000;
+    background-color: rgb(146, 200, 247);
 }
-.naviconholder:hover progress {
+/* .naviconholder:hover progress {
     display: inline;
-}
+} */
 .naviconholdertext {
     width: 100%;
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: #FFF;
+}
+.naviconholder.active {
+    background-color: rgb(0, 204, 255);
 }
 
 .profileicon {
@@ -98,8 +103,5 @@ progress {
 
 
 
-.firstintropage {
-    width: 100%;
-    height: calc(100vh - 80px);
-    background-color: aliceblue;
-}
+
+
