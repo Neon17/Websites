@@ -1,5 +1,11 @@
 
 
+main {
+    background-image: url('../img/aboutbackground.png');
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+}
 .mission {
     width: 100%;
     display: flex;
@@ -19,7 +25,6 @@
 .aboutus {
     width: 100%;
     padding: 10px 0 20px 0;
-    background-color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
